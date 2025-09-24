@@ -12,7 +12,7 @@ const Product = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:8081/api/product/${id}`);
+        const response = await axios.get(`http://ec2-23-23-55-166.compute-1.amazonaws.com:8081/api/product/${id}`);
         setProduct(response.data);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -24,7 +24,7 @@ const Product = () => {
 
   const deleteProduct = async () => {
     try {
-      await axios.delete(`http://localhost:8081/api/product/${id}`);
+      await axios.delete(`http://ec2-23-23-55-166.compute-1.amazonaws.com:8081/api/product/${id}`);
       removeFromCart(id);
       alert("Product deleted successfully");
       refreshData();
