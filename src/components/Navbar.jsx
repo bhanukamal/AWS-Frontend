@@ -62,14 +62,14 @@ const Navbar = ({ onSelectCategory }) => {
     document.body.className = theme;
   }, [theme]);
 
-  const categories = ["Laptop", "Headphone", "Mobile", "Electronics", "Toys", "Fashion"];
+  const categories = ["Food","Laptop", "Headphone", "Mobile", "Electronics", "Toys", "Fashion"];
 
   return (
     <header>
       <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            HiTeckKart
+            Online-Grocery-Store
           </a>
           <button
             className="navbar-toggler"
