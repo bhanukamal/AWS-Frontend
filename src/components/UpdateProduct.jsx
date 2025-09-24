@@ -20,7 +20,7 @@ const UpdateProduct = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:8081/api/product/${id}`);
+        const response = await axios.get(`http://ec2-23-23-55-166.compute-1.amazonaws.com:8081/api/product/${id}`);
         setProduct(response.data);
         setUpdateProduct(response.data);
       } catch (error) {
@@ -35,7 +35,7 @@ const UpdateProduct = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:8081/api/product/${id}`, updateProduct, {
+      await axios.put(`http://ec2-23-23-55-166.compute-1.amazonaws.com:8081/api/product/${id}`, updateProduct, {
         headers: { "Content-Type": "application/json" },
       });
       alert("Product updated successfully!");
