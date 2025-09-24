@@ -20,7 +20,7 @@ const Navbar = ({ onSelectCategory }) => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8081/api/products");
+      const response = await axios.get("http://ec2-23-23-55-166.compute-1.amazonaws.com:8081/api/products");
       setSearchResults(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -33,7 +33,7 @@ const Navbar = ({ onSelectCategory }) => {
       setShowSearchResults(true);
       try {
         const response = await axios.get(
-          `http://localhost:8081/api/products/search?keyword=${value}`
+          `http://ec2-23-23-55-166.compute-1.amazonaws.com:8081/api/products/search?keyword=${value}`
         );
         setSearchResults(response.data);
         setNoResults(response.data.length === 0);
