@@ -22,7 +22,7 @@ const AddProduct = () => {
     event.preventDefault();
 
     axios
-      .post("http://localhost:8081/api/product", product, {
+      .post("http://ec2-23-23-55-166.compute-1.amazonaws.com:8081/api/product", product, {
         headers: {
           "Content-Type": "application/json",
         },
