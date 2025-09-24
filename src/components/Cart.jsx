@@ -13,7 +13,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchAndUpdateCart = async () => {
       try {
-        const response = await axios.get("http://localhost:8081/api/products");
+        const response = await axios.get("http://ec2-23-23-55-166.compute-1.amazonaws.com:8081/api/products");
         const backendProductIds = response.data.map((product) => product.id);
 
         const updatedCartItems = cart.filter((item) =>
